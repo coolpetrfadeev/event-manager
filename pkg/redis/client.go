@@ -69,7 +69,6 @@ func (r *redisClient) setConnection() (ok bool) {
 		Addr:                  fmt.Sprintf("%v:%v", r.config.Host, r.config.Port),
 		Username:              r.config.User,
 		Password:              r.config.Password,
-		ClientName:            r.serviceName,
 		ReadTimeout:           time.Duration(r.config.ReadTimeout) * time.Second,
 		WriteTimeout:          time.Duration(r.config.WriteTimeout) * time.Second,
 		PoolFIFO:              true,
